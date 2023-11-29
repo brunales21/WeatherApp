@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="600.0" maxWidth="400.0" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.weatherapp.WeatherController">
+   <children>
+      <Pane fx:id="pane" layoutX="102.0" layoutY="35.0" style="-fx-border-color: red;" />
+      <HBox fx:id="hbox" layoutY="300.0" prefHeight="150.0" prefWidth="400.0" spacing="30.0" style="-fx-border-color: black;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="298.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.weatherapp.SearchController">
+   <children>
+      <TextField fx:id="textField" layoutX="39.0" layoutY="34.0" prefHeight="28.0" prefWidth="172.0" />
+      <ImageView fx:id="imageView" fitHeight="28.0" fitWidth="35.0" layoutX="229.0" layoutY="34.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/crescent-moon.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

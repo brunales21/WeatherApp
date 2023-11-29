@@ -4,7 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffdb8bdd-e751-49c3-8a3a-05b1e51b36d7" name="Changes" comment="" />
+    <list default="true" id="ffdb8bdd-e751-49c3-8a3a-05b1e51b36d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/Captura de pantalla 2023-11-20 000021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/cloudy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/crescent-moon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/haze.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/heavy-rain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/rainy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/strawberry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/sun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/watermelon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/wind.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperatur.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemWindyRainHumidity.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/hello-view.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,31 +45,44 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2YcYEsne4iqdR3EM3209eshtudv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Monica/Documents/2DAM/Interfaces/Weather/WeatherApp/src/main/resources/com/app/weatherapp",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.app.weatherapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Monica\Documents\2DAM\Interfaces\Weather\WeatherApp\src\main\resources\com\app\weatherapp" />
     </key>
   </component>
   <component name="RunManager">
