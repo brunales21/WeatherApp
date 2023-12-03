@@ -6,11 +6,11 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.weatherapp.ItemTemperturController">
    <children>
-      <VBox>
+      <VBox prefHeight="225.0" prefWidth="130.0">
          <children>
-            <ImageView fitHeight="116.0" fitWidth="198.0" pickOnBounds="true" preserveRatio="true" />
-            <Label alignment="CENTER" prefHeight="73.0" prefWidth="202.0" text="Grados" />
-            <Label alignment="CENTER" prefHeight="36.0" prefWidth="198.0" text="Ciudad" />
+            <ImageView fx:id="weatherIcon" fitHeight="115.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="degress" alignment="CENTER" prefHeight="73.0" prefWidth="202.0" text="Grados" />
+            <Label fx:id="city" alignment="CENTER" prefHeight="36.0" prefWidth="198.0" text="Ciudad" />
          </children>
       </VBox>
    </children>

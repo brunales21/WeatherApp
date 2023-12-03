@@ -5,37 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdb8bdd-e751-49c3-8a3a-05b1e51b36d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/Captura de pantalla 2023-11-20 000021.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/cloudy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/crescent-moon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/haze.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/heavy-rain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/rainy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/snow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/strawberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/sun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/watermelon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/wind.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperatur.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemWindyRainHumidity.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/esquema-de-boton-circular-de-flecha-hacia-atras-izquierda.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/frio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/gota-de-agua.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/humedad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/temperatura-alta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/Captura de pantalla 2023-11-20 000021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/strawberry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/watermelon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperatur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperatur.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemWindyRainHumidity.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemWindyRainHumidity.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +61,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Monica/Documents/2DAM/Interfaces/Weather/WeatherApp/src/main/resources/com/app/weatherapp",
+    "last_opened_file_path": "C:/Users/Monica/Documents/2DAM/Interfaces/Weather/WeatherApp/src/main/resources/com/app/weatherapp/img",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,12 +73,26 @@
       <recent name="com.app.weatherapp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Monica\Documents\2DAM\Interfaces\Weather\WeatherApp\src\main\resources\com\app\weatherapp\img" />
       <recent name="C:\Users\Monica\Documents\2DAM\Interfaces\Weather\WeatherApp\src\main\resources\com\app\weatherapp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.app.weatherapp.HelloApplication" />
+      <module name="WeatherApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.app.weatherapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeatherService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.app.weatherapp.WeatherService" />
       <module name="WeatherApp" />
       <extension name="coverage">
         <pattern>
@@ -102,6 +107,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.WeatherService" />
       </list>
     </recent_temporary>
   </component>

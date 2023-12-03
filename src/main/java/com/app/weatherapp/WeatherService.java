@@ -7,6 +7,11 @@ import okhttp3.Response;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,68 +22,74 @@ public class WeatherService {
 
     private static final String API_KEY = "c37f27d3b5efe8d856bf0e9fa36fc1ae";  // Reemplaza con tu clave de API
     private static final String API_URL = "https://api.openweathermap.org/data/2.5/weather";
-    private final OkHttpClient httpClient = new OkHttpClient();
+    private final HttpClient httpClient = HttpClient.newHttpClient();
 
 
-    public WeatherData getWeatherData(String location) throws IOException {
+
+    public WeatherData getWeatherData(String location)  {
+
         String requestUrl = API_URL + "?q=" + location + "&appid=" + API_KEY;
 
-        Request request = new Request.Builder()
-                .url(requestUrl)
+        URI uri = null;
+        try {
+            uri = new URI(requestUrl);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uri)
+                .GET()
                 .build();
 
-        try (Response response = httpClient.newCall(request).execute()) {
-            if (!response.isSuccessful()) {
-                throw new IOException("Unexpected code " + response);
-            }
+        HttpResponse<String> response = null;
+        try {
+            response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
-            JSONObject json = new JSONObject(response.body());
-            JSONArray weather = json.getJSONArray("weather");
-            JSONObject valorClima = weather.getJSONObject(0);
-            String clima = valorClima.getString("main");
+        JSONObject json = new JSONObject(response.body());
+        System.out.println(json);
+        JSONArray weather = json.getJSONArray("weather");
+        JSONObject valorClima = weather.getJSONObject(0);
+        String icon = valorClima.getString("main");
 
-            //Temperatura tranformada a celsius
-            JSONObject temp= json.getJSONObject("main");
-            BigDecimal temperatura = temp.getBigDecimal("temp");
-            temperatura = temperatura.subtract(BigDecimal.valueOf(273.15));
+        //Temperatura tranformada a celsius
+        JSONObject temp= json.getJSONObject("main");
+        BigDecimal temperatura = temp.getBigDecimal("temp");
+        temperatura = temperatura.subtract(BigDecimal.valueOf(273.15));
 
-            BigDecimal temperaturaMaxima = temp.getBigDecimal("temp_max");
-            temperaturaMaxima = temperaturaMaxima.subtract(BigDecimal.valueOf(273.15));
+        BigDecimal temperaturaMaxima = temp.getBigDecimal("temp_max");
+        temperaturaMaxima = temperaturaMaxima.subtract(BigDecimal.valueOf(273.15));
 
-            BigDecimal temperaturaMinima = temp.getBigDecimal("temp_min");
-            temperaturaMinima = temperaturaMinima.subtract(BigDecimal.valueOf(273.15));
+        BigDecimal temperaturaMinima = temp.getBigDecimal("temp_min");
+        temperaturaMinima = temperaturaMinima.subtract(BigDecimal.valueOf(273.15));
 
 
+        //Viento tranformado a km/h
+        JSONObject viento= json.getJSONObject("wind");
+        double wind = viento.getInt("speed");
+        wind = wind*3.6;
 
-            //Viento tranformado a km/h
-            JSONObject viento= json.getJSONObject("wind");
-            double wind = viento.getInt("speed");
-            wind = wind*3.6;
+        int humidity = temp.getInt("humidity");
 
-            int humidity = temp.getInt("humidity");
-
-            JSONObject valorLLuvia;
-            int lluvia = 0;
+        JSONObject valorLLuvia;
+        double lluvia = 0;
+        try {
             if ((valorLLuvia=json.getJSONObject("rain"))!=null) {
-
-                 lluvia = valorLLuvia.getInt("h1");
+                lluvia = valorLLuvia.getDouble("1h");
                 System.out.println(lluvia);
             }
 
-            // Como ejemplo, crearemos un objeto WeatherData con valores predeterminados
-            WeatherData weatherData = new WeatherData(location,temperatura,temperaturaMinima,temperaturaMaxima
-            ,clima,lluvia,wind,humidity);
-
-            return weatherData;
+        }catch (JSONException e){
+            lluvia=0;
         }
+
+            // Como ejemplo, crearemos un objeto WeatherData con valores predeterminados
+        WeatherData weatherData = new WeatherData(location,temperatura,temperaturaMinima,temperaturaMaxima,icon,lluvia,wind,humidity);
+        return weatherData;
     }
-
-    // Método para parsear la respuesta JSON y construir un objeto WeatherData
-    private WeatherData parseJsonResponse(String jsonResponse) {
-        // Implementar lógica de parsing aquí
-        return null;
-    }
-
-
 }

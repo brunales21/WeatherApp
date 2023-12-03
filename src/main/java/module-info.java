@@ -3,6 +3,7 @@ module com.app.weatherapp {
     requires javafx.fxml;
     requires okhttp3;
     requires org.json;
+    requires java.net.http;
 
     opens com.app.weatherapp to javafx.fxml;
     exports com.app.weatherapp;
