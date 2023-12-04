@@ -11,21 +11,19 @@ import lombok.Data;
 public class WeatherData {
     private String locationName;
     private BigDecimal temperature;
-    private BigDecimal min_temperature;
-    private BigDecimal max_temperature;
+    private BigDecimal minTemp;
+    private BigDecimal maxTemp;
     private String iconWeather;
     private double raining;
     private double windy;
     private int humidity;
 
 
-    public WeatherData(String locationName, BigDecimal temperature,
-                       BigDecimal min_temperature, BigDecimal max_temperature,
-                       String weather, double raining, double windy, int humidity) {
+    public WeatherData(String locationName, BigDecimal temperature, BigDecimal min_temperature, BigDecimal max_temperature, String weather, double raining, double windy, int humidity) {
         this.locationName = locationName;
         this.temperature = temperature;
-        this.min_temperature = min_temperature;
-        this.max_temperature = max_temperature;
+        this.minTemp = min_temperature;
+        this.maxTemp = max_temperature;
         this.iconWeather = weather;
         this.raining = raining;
         this.windy = windy;
@@ -48,20 +46,20 @@ public class WeatherData {
         this.temperature = temperature;
     }
 
-    public BigDecimal getMin_temperature() {
-        return min_temperature;
+    public BigDecimal getMinTemp() {
+        return minTemp;
     }
 
-    public void setMin_temperature(BigDecimal min_temperature) {
-        this.min_temperature = min_temperature;
+    public void setMinTemp(BigDecimal minTemp) {
+        this.minTemp = minTemp;
     }
 
-    public BigDecimal getMax_temperature() {
-        return max_temperature;
+    public BigDecimal getMaxTemp() {
+        return maxTemp;
     }
 
-    public void setMax_temperature(BigDecimal max_temperature) {
-        this.max_temperature = max_temperature;
+    public void setMaxTemp(BigDecimal maxTemp) {
+        this.maxTemp = maxTemp;
     }
 
     public String getIconWeather() {

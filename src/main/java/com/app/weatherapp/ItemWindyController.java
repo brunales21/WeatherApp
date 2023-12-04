@@ -12,7 +12,7 @@ import static com.app.weatherapp.WeatherController.setIconWeather;
 public class ItemWindyController {
 
     @FXML
-    Label value,tipoCampo;
+    Label value, tipoCampo;
     @FXML
     ImageView weatherIcon;
 
