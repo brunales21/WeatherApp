@@ -26,10 +26,8 @@ public class WeatherService {
 
 
 
-    public WeatherData getWeatherData(String location)  {
-
+    public WeatherData getWeatherData(String location) throws LocationNotFoundException {
         String requestUrl = API_URL + "?q=" + location + "&appid=" + API_KEY;
-
         URI uri = null;
         try {
             uri = new URI(requestUrl);
@@ -44,10 +42,17 @@ public class WeatherService {
         HttpResponse<String> response = null;
         try {
             response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        }
+
+        // Manejar el código de respuesta
+        int statusCode = response.statusCode();
+        if (statusCode == 404) {
+            // Localización no encontrada, lanzar una excepción específica
+            throw new LocationNotFoundException("Localización no encontrada: " + location);
+        } else if (statusCode != 200) {
+            throw new RuntimeException("Error al obtener datos meteorológicos");
         }
 
 

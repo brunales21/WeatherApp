@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdb8bdd-e751-49c3-8a3a-05b1e51b36d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/lupa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ErrorDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/LocationNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/esquema-de-boton-circular-de-flecha-hacia-atras-izquierda.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/backBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperatur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperatur.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -120,19 +128,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java</url>
-          <line>31</line>
-          <properties class="com.app.weatherapp.WeatherController" method="setItems">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="data.windy" />

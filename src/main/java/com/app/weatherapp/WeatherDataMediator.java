@@ -5,43 +5,33 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 
 public class WeatherDataMediator {
-    private WeatherService weatherService;
+    private final WeatherService weatherService;
     private SearchController searchController;
     private WeatherController weatherController;
-
 
     public WeatherDataMediator() {
         this.weatherService = new WeatherService();
     }
 
-
-    public void inicializeWeatherView(String localizacion)  {
-
+    public void inicializeWeatherView(String localizacion) throws LocationNotFoundException {
         WeatherData data = weatherService.getWeatherData(localizacion);
-        this.searchController=new SearchController();
+        //this.searchController = new SearchController();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("weather.fxml"));
-
-
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(),400,600);
+            scene = new Scene(fxmlLoader.load(), 400, 600);
             weatherController = fxmlLoader.getController();
             weatherController.setItems(data);
-            //searchController.closeSearch();
+            weatherController.applyGradientBackground(); // Aplica el fondo degradado
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         Stage stage = new Stage();
-        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-
-
-
-        //searchController.closeSearch();
     }
 
 }

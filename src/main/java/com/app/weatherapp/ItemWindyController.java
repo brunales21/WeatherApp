@@ -20,6 +20,7 @@ public class ItemWindyController {
         return value;
     }
 
+
     public void setValue(String valor) {
         value.setText(valor);
     }
@@ -42,4 +43,5 @@ public class ItemWindyController {
         Image imagen2 = new Image(inputStream);
         weatherIcon.setImage(imagen2);
     }
+
 }
