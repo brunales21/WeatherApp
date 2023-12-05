@@ -17,20 +17,11 @@ public class ItemTemperturController {
     public ItemTemperturController(){
 
     }
-
     public void setValues(WeatherData data){
         setCity(data.getLocationName());
-        setWeatherIcon(data.getIconWeather());
+        setWeatherIconPath(data.getIconWeather());
         setDegress(String.valueOf(data.getTemperature()));
     }
-
-    public void setWeatherIcon(String weather) {
-        String weatherIcono = "img/"+setIconWeather(weather);
-        InputStream inputStream = WeatherDataMediator.class.getResourceAsStream(weatherIcono);
-        Image imagen2 = new Image(inputStream);
-        weatherIcon.setImage(imagen2);
-    }
-
     public static String setIconWeather(String clime){
         String climaIDImage="";
         switch (clime){
@@ -65,6 +56,12 @@ public class ItemTemperturController {
 
         }
         return climaIDImage;
+    }
+    public void setWeatherIconPath(String weather) {
+        String weatherIcono = "img/"+setIconWeather(weather);
+        InputStream inputStream = WeatherDataMediator.class.getResourceAsStream(weatherIcono);
+        Image imagen2 = new Image(inputStream);
+        weatherIcon.setImage(imagen2);
     }
     public void setDegress(String value) {
         degress.setText(value+"ºC");

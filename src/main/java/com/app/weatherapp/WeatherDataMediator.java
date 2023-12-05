@@ -11,31 +11,26 @@ public class WeatherDataMediator {
     private WeatherService weatherService;
     private SearchController searchController;
     private WeatherController weatherController;
-    private String localizacion;
+
 
     public WeatherDataMediator() {
         this.weatherService = new WeatherService();
     }
 
-   /* public void registerSearchController(SearchController searchController) {
-        this.searchController = searchController;
-    }
-
-    public void registerWeatherController(WeatherController weatherController) {
-        this.weatherController = weatherController;
-    }
-
-    */
 
     public void inicializeWeatherView(String localizacion)  {
 
-        this.weatherController=new WeatherController();
+        WeatherData data = weatherService.getWeatherData(localizacion);
         this.searchController=new SearchController();
-
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("weather.fxml"));
+
+
         Scene scene = null;
         try {
             scene = new Scene(fxmlLoader.load(),400,600);
+            weatherController = fxmlLoader.getController();
+            weatherController.setItems(data);
+            //searchController.closeSearch();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -43,6 +38,10 @@ public class WeatherDataMediator {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+
+
+
+        //searchController.closeSearch();
     }
 
 }
