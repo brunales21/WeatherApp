@@ -6,9 +6,11 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -27,7 +29,14 @@ public class WeatherService {
 
 
     public WeatherData getWeatherData(String location) throws LocationNotFoundException {
-        String requestUrl = API_URL + "?q=" + location + "&appid=" + API_KEY;
+        String encodedLocation = null;
+        try {
+            encodedLocation = URLEncoder.encode(location, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+        String requestUrl = API_URL + "?q=" + encodedLocation + "&appid=" + API_KEY;
+
         URI uri = null;
         try {
             uri = new URI(requestUrl);

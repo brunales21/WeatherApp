@@ -3,6 +3,7 @@ package com.app.weatherapp;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -12,13 +13,10 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SearchController.class.getResource("search.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 300, 500);
-
-        // Obtén el controlador después de cargar la escena
         SearchController searchController = fxmlLoader.getController();
         searchController.applyGradientBackground();
-
-        stage.setTitle("Hello!");
         stage.setScene(scene);
+        stage.getIcons().add(new Image(String.valueOf(SearchController.class.getResource("img/iconoApp.png"))));
         stage.show();
 
     }

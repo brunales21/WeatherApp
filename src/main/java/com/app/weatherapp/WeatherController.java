@@ -3,6 +3,7 @@ package com.app.weatherapp;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -13,21 +14,62 @@ import java.util.List;
 
 public class WeatherController {
 
-    @FXML Pane pane;
-    @FXML HBox hbox;
-    @FXML HBox minymax;
+    @FXML
+    Pane pane;
+    @FXML
+    HBox hbox;
+    @FXML
+    HBox minymax;
     WeatherDataMediator mediator;
     ItemTemperturController itemTemperturController;
 
     public WeatherController() {
         this.mediator = new WeatherDataMediator();
-        this.itemTemperturController= new ItemTemperturController();
+        this.itemTemperturController = new ItemTemperturController();
+    }
+
+    public static String setIconWeather(String clime) {
+        String climaIDImage = "";
+        switch (clime) {
+            case "Rain":
+                climaIDImage = "rainy.png";
+                break;
+            case "Clear sky":
+                climaIDImage = "sun.png";
+                break;
+            case "Few clouds":
+                climaIDImage = "cloudy.png";
+                break;
+            case "Scattered clouds":
+                climaIDImage = "cloud.png";
+                break;
+            case "Broken clouds":
+                climaIDImage = "rainy.png";
+                break;
+            case "Shower rain":
+                climaIDImage = "rainy.png";
+                break;
+
+            case "Thunderstorm":
+                climaIDImage = "heavy-rain.png";
+                break;
+            case "Snow":
+                climaIDImage = "snow.png";
+                break;
+            case "Mist":
+                climaIDImage = "haze.png";
+                break;
+
+
+        }
+        return climaIDImage;
     }
 
     public void applyGradientBackground() {
         pane.getStyleClass().add(".root");
     }
-    private void addItemTemperature(String fxmlPath, ItemTemperturController itemTemperturController, Pane pane , WeatherData data) {
+
+    private void addItemTemperature(String fxmlPath, ItemTemperturController itemTemperturController, Pane pane, WeatherData data) {
         FXMLLoader loader0 = new FXMLLoader(getClass().getResource(fxmlPath));
         Pane ventanaSecundaria0 = null;
         try {
@@ -41,13 +83,7 @@ public class WeatherController {
     }
 
     public void addWindyItems(WeatherData data) {
-        List<ItemConfig> itemConfigs = Arrays.asList(
-                new ItemConfig("itemWindyRainHumidity.fxml", "wind.png", "Viento", String.valueOf(data.getWindy()), hbox),
-                new ItemConfig("itemWindyRainHumidity.fxml", "humedad.png", "Humedad", String.valueOf(data.getHumidity()), hbox),
-                new ItemConfig("itemWindyRainHumidity.fxml", "gota-de-agua.png", "Lluvia", String.valueOf(data.getRaining()), hbox),
-                new ItemConfig("itemWindyRainHumidity.fxml", "frio.png", "Minima", String.valueOf(data.getMin_temperature()), minymax),
-                new ItemConfig("itemWindyRainHumidity.fxml", "temperatura-alta.png", "Maxima", String.valueOf(data.getMax_temperature()), minymax)
-        );
+        List<ItemConfig> itemConfigs = Arrays.asList(new ItemConfig("itemWindyRainHumidity.fxml", "wind.png", "Viento", String.valueOf(data.getWindy()), hbox), new ItemConfig("itemWindyRainHumidity.fxml", "humedad.png", "Humedad", String.valueOf(data.getHumidity()), hbox), new ItemConfig("itemWindyRainHumidity.fxml", "gota-de-agua.png", "Lluvia", String.valueOf(data.getRaining()), hbox), new ItemConfig("itemWindyRainHumidity.fxml", "frio.png", "Minima", String.valueOf(data.getMin_temperature()), minymax), new ItemConfig("itemWindyRainHumidity.fxml", "temperatura-alta.png", "Maxima", String.valueOf(data.getMax_temperature()), minymax));
 
         for (ItemConfig config : itemConfigs) {
             addItem(config);
@@ -68,65 +104,27 @@ public class WeatherController {
         }
     }
 
-
-    public void setItems(WeatherData data){
-        addItemTemperature("itemTemperatur.fxml", itemTemperturController, pane, data);
+    public void setItems(WeatherData data) {
+        addItemTemperature("itemTemperature.fxml", itemTemperturController, pane, data);
         addWindyItems(data);
     }
 
-
     @FXML
-    public void close(){
+    public void close() {
         FXMLLoader fxmlLoader = new FXMLLoader(SearchController.class.getResource("search.fxml"));
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(),300,500);
+            scene = new Scene(fxmlLoader.load(), 300, 500);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         Stage stage = new Stage();
         stage.setScene(scene);
+        stage.getIcons().add(new Image(String.valueOf(SearchController.class.getResource("img/iconoApp.png"))));
         stage.show();
         Stage myStage = (Stage) this.pane.getScene().getWindow();
         myStage.close();
 
-    }
-
-    public static String setIconWeather(String clime){
-        String climaIDImage="";
-        switch (clime){
-            case "Rain":
-                climaIDImage="rainy.png";
-                break;
-            case "Clear sky":
-                climaIDImage="sun.png";
-                break;
-            case "Few clouds":
-                climaIDImage="cloudy.png";
-                break;
-            case "Scattered clouds":
-                climaIDImage="cloud.png";
-                break;
-            case "Broken clouds":
-                climaIDImage="rainy.png";
-                break;
-            case "Shower rain":
-                climaIDImage="rainy.png";
-                break;
-
-            case "Thunderstorm":
-                climaIDImage="heavy-rain.png";
-                break;
-            case "Snow":
-                climaIDImage="snow.png";
-                break;
-            case "Mist":
-                climaIDImage="haze.png";
-                break;
-
-
-        }
-        return climaIDImage;
     }
 
 }
