@@ -7,8 +7,6 @@ import javafx.scene.image.ImageView;
 
 import java.io.InputStream;
 
-import static com.app.weatherapp.WeatherController.setIconWeather;
-
 public class ItemWindyController {
 
     @FXML

@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ffdb8bdd-e751-49c3-8a3a-05b1e51b36d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/LocationNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/LocationNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/search.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/style-searchview.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/style-weatherview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperature.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
