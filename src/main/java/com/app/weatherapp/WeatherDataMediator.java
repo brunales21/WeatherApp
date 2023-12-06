@@ -31,7 +31,6 @@ public class WeatherDataMediator {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.getIcons().add(new Image(String.valueOf(WeatherController.class.getResource("img/iconoApp.png"))));
