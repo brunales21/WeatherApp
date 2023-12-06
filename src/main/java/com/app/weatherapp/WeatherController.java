@@ -29,39 +29,18 @@ public class WeatherController {
     }
 
     public static String setIconWeather(String clime) {
-        String climaIDImage = "";
-        switch (clime) {
-            case "Rain":
-                climaIDImage = "rainy.png";
-                break;
-            case "Clear sky":
-                climaIDImage = "sun.png";
-                break;
-            case "Few clouds":
-                climaIDImage = "cloudy.png";
-                break;
-            case "Scattered clouds":
-                climaIDImage = "cloud.png";
-                break;
-            case "Broken clouds":
-                climaIDImage = "rainy.png";
-                break;
-            case "Shower rain":
-                climaIDImage = "rainy.png";
-                break;
-
-            case "Thunderstorm":
-                climaIDImage = "heavy-rain.png";
-                break;
-            case "Snow":
-                climaIDImage = "snow.png";
-                break;
-            case "Mist":
-                climaIDImage = "haze.png";
-                break;
-
-
-        }
+        String climaIDImage = switch (clime) {
+            case "Rain" -> "rainy.png";
+            case "Clear sky" -> "sun.png";
+            case "Few clouds" -> "cloudy.png";
+            case "Scattered clouds" -> "cloud.png";
+            case "Broken clouds" -> "rainy.png";
+            case "Shower rain" -> "rainy.png";
+            case "Thunderstorm" -> "heavy-rain.png";
+            case "Snow" -> "snow.png";
+            case "Mist" -> "haze.png";
+            default -> "";
+        };
         return climaIDImage;
     }
 
@@ -110,7 +89,7 @@ public class WeatherController {
     }
 
     @FXML
-    public void close() {
+    public void onClick() {
         FXMLLoader fxmlLoader = new FXMLLoader(SearchController.class.getResource("search.fxml"));
         Scene scene = null;
         try {
@@ -118,12 +97,13 @@ public class WeatherController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.getIcons().add(new Image(String.valueOf(SearchController.class.getResource("img/iconoApp.png"))));
-        stage.show();
-        Stage myStage = (Stage) this.pane.getScene().getWindow();
-        myStage.close();
+        Stage stage1 = new Stage();
+        stage1.setScene(scene);
+        stage1.getIcons().add(new Image(String.valueOf(SearchController.class.getResource("img/iconoApp.png"))));
+        stage1.show();
+
+        Stage stage2 = (Stage) this.pane.getScene().getWindow();
+        stage2.close();
 
     }
 

@@ -29,6 +29,9 @@ public class WeatherService {
 
 
     public WeatherData getWeatherData(String location) throws LocationNotFoundException {
+        if (location.isBlank()) {
+            throw new LocationNotFoundException("");
+        }
         String encodedLocation = null;
         try {
             encodedLocation = URLEncoder.encode(location, "UTF-8");
@@ -59,12 +62,10 @@ public class WeatherService {
         int statusCode = response.statusCode();
         if (statusCode == 404) {
             // Localización no encontrada, lanzar una excepción específica
-            throw new LocationNotFoundException("Localización no encontrada: " + location);
+            throw new LocationNotFoundException(location);
         } else if (statusCode != 200) {
             throw new RuntimeException("Error al obtener datos meteorológicos");
         }
-
-
         JSONObject json = new JSONObject(response.body());
         System.out.println(json);
         JSONArray weather = json.getJSONArray("weather");

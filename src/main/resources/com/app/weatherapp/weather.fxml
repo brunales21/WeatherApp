@@ -3,12 +3,12 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane stylesheets="@style-weatherview.css" maxHeight="600.0" maxWidth="400.0" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.weatherapp.WeatherController">
+<AnchorPane maxHeight="600.0" maxWidth="400.0" prefHeight="600.0" prefWidth="400.0" styleClass="weather" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.weatherapp.WeatherController">
    <children>
-      <Pane fx:id="pane" layoutX="138.0" layoutY="35.0"/>
-      <HBox fx:id="hbox" alignment="TOP_CENTER" layoutX="40.0" layoutY="300.0" spacing="40.0" style="-fx-border-color: black;"/>
-      <HBox fx:id="minymax" layoutX="100.0" layoutY="453.0" spacing="70.0" style="-fx-border-color: black;"/>
-      <ImageView fitHeight="22.0" fitWidth="35.0" layoutX="25.0" layoutY="24.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+      <Pane fx:id="pane" layoutX="138.0" layoutY="35.0" />
+      <HBox fx:id="hbox" alignment="TOP_CENTER" layoutX="40.0" layoutY="300.0" spacing="40.0"/>
+      <HBox fx:id="minymax" layoutX="100.0" layoutY="453.0" spacing="70.0"/>
+      <ImageView fitHeight="22.0" fitWidth="35.0" layoutX="25.0" layoutY="24.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/backBtn.png" />
          </image>

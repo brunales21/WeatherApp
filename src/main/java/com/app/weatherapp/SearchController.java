@@ -23,7 +23,7 @@ public class SearchController {
     @FXML
     public void onClick(MouseEvent event) {
         try {
-            mediator.inicializeWeatherView(textField.getText());
+            mediator.initWeatherController(textField.getText());
             closeSearch();
         } catch (LocationNotFoundException e) {
             // Muestra una ventana de error con el mensaje de la excepción.

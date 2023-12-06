@@ -12,11 +12,13 @@ public class WeatherDataMediator {
     private SearchController searchController;
     private WeatherController weatherController;
 
+
+
     public WeatherDataMediator() {
         this.weatherService = new WeatherService();
     }
 
-    public void inicializeWeatherView(String localizacion) throws LocationNotFoundException {
+    public void initWeatherController(String localizacion) throws LocationNotFoundException {
         WeatherData data = weatherService.getWeatherData(localizacion);
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("weather.fxml"));
         Scene scene = null;
@@ -29,9 +31,27 @@ public class WeatherDataMediator {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.getIcons().add(new Image(String.valueOf(WeatherController.class.getResource("img/iconoApp.png"))));
+        stage.show();
+    }
+
+    public void initSearchController() {
+        FXMLLoader fxmlLoader = new FXMLLoader(SearchController.class.getResource("search.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load(), 300, 500);
+            searchController = fxmlLoader.getController();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.getIcons().add(new Image(String.valueOf(SearchController.class.getResource("img/iconoApp.png"))));
         stage.show();
     }
 
