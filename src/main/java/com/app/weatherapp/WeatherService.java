@@ -1,9 +1,9 @@
 package com.app.weatherapp;
 
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -14,10 +14,7 @@ import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.nio.charset.StandardCharsets;
 
 
 public class WeatherService {
@@ -27,17 +24,12 @@ public class WeatherService {
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
 
-
     public WeatherData getWeatherData(String location) throws LocationNotFoundException {
         if (location.isBlank()) {
             throw new LocationNotFoundException("");
         }
         String encodedLocation = null;
-        try {
-            encodedLocation = URLEncoder.encode(location, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
-        }
+        encodedLocation = URLEncoder.encode(location, StandardCharsets.UTF_8);
         String requestUrl = API_URL + "?q=" + encodedLocation + "&appid=" + API_KEY;
 
         URI uri = null;
@@ -73,7 +65,7 @@ public class WeatherService {
         String icon = valorClima.getString("main");
 
         //Temperatura tranformada a celsius
-        JSONObject temp= json.getJSONObject("main");
+        JSONObject temp = json.getJSONObject("main");
         BigDecimal temperatura = temp.getBigDecimal("temp");
         temperatura = temperatura.subtract(BigDecimal.valueOf(273.15));
 
@@ -85,26 +77,26 @@ public class WeatherService {
 
 
         //Viento tranformado a km/h
-        JSONObject viento= json.getJSONObject("wind");
+        JSONObject viento = json.getJSONObject("wind");
         double wind = viento.getInt("speed");
-        wind = wind*3.6;
+        wind = wind * 3.6;
 
         int humidity = temp.getInt("humidity");
 
         JSONObject valorLLuvia;
         double lluvia = 0;
         try {
-            if ((valorLLuvia=json.getJSONObject("rain"))!=null) {
+            if ((valorLLuvia = json.getJSONObject("rain")) != null) {
                 lluvia = valorLLuvia.getDouble("1h");
                 System.out.println(lluvia);
             }
 
-        }catch (JSONException e){
-            lluvia=0;
+        } catch (JSONException e) {
+            lluvia = 0;
         }
 
-            // Como ejemplo, crearemos un objeto WeatherData con valores predeterminados
-        WeatherData weatherData = new WeatherData(location,temperatura,temperaturaMinima,temperaturaMaxima,icon,lluvia,wind,humidity);
+        // Como ejemplo, crearemos un objeto WeatherData con valores predeterminados
+        WeatherData weatherData = new WeatherData(location, temperatura, temperaturaMinima, temperaturaMaxima, icon, lluvia, wind, humidity);
         return weatherData;
     }
 }

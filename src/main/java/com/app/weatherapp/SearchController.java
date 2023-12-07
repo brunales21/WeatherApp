@@ -24,7 +24,7 @@ public class SearchController {
     public void onClick(MouseEvent event) {
         try {
             mediator.initWeatherController(textField.getText());
-            closeSearch();
+            closeSearchView();
         } catch (LocationNotFoundException e) {
             // Muestra una ventana de error con el mensaje de la excepción.
             ErrorDialog errorDialog = new ErrorDialog(e.getMessage());
@@ -41,8 +41,12 @@ public class SearchController {
         textField.setText("");
     }
 
-    public void closeSearch() {
+    public void closeSearchView() {
         Stage myStage = (Stage) this.textField.getScene().getWindow();
         myStage.close();
+    }
+
+    public Stage getStage() {
+        return (Stage) textField.getScene().getWindow();
     }
 }

@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdb8bdd-e751-49c3-8a3a-05b1e51b36d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherIconMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/ash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/dust.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/fog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/mist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/sand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/smoke.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/squall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/tornado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/img/unknown.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemTemperturController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/ItemWindyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/itemTemperature.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/weatherapp/weather.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherDataMediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/weatherapp/WeatherService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,5 +139,10 @@
         <watch expression="data.windy" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WeatherApp$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1701944018263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.app.weatherapp.*</FILTER>
+    </SUITE>
   </component>
 </project>

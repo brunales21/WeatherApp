@@ -47,11 +47,21 @@ public class WeatherDataMediator {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.getIcons().add(new Image(String.valueOf(SearchController.class.getResource("img/iconoApp.png"))));
         stage.show();
     }
 
+    public void closeSearchView() {
+        if (searchController != null && searchController.getStage() != null) {
+            searchController.getStage().close();
+        }
+    }
+
+    public void closeWeatherView() {
+        if (weatherController != null && weatherController.getStage() != null) {
+            weatherController.getStage().close();
+        }
+    }
 }
