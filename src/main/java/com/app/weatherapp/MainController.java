@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class MainController extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SearchController.class.getResource("search.fxml"));
@@ -16,11 +16,11 @@ public class HelloApplication extends Application {
         SearchController searchController = fxmlLoader.getController();
         searchController.applyGradientBackground();
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.getIcons().add(new Image(String.valueOf(SearchController.class.getResource("img/iconoApp.png"))));
         stage.show();
 
     }
-
     public static void main(String[] args) {
         launch();
     }

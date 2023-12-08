@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 
 import java.io.InputStream;
 
-public class ItemWindyController {
+public class ItemController {
 
     @FXML
     Label value,tipoCampo;
@@ -23,9 +23,6 @@ public class ItemWindyController {
         value.setText(valor);
     }
 
-    public Label getTipoCampo() {
-        return tipoCampo;
-    }
 
     public void setTipoCampo(String tipo) {
         tipoCampo.setText(tipo);

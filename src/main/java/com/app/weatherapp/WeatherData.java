@@ -2,17 +2,11 @@ package com.app.weatherapp;
 
 import java.math.BigDecimal;
 
-/*
-import lombok.Data;
-
-@Data
-
- */
 public class WeatherData {
     private String locationName;
     private BigDecimal temperature;
-    private BigDecimal min_temperature;
-    private BigDecimal max_temperature;
+    private BigDecimal minTemperature;
+    private BigDecimal maxTemperature;
     private String iconWeather;
     private double raining;
     private double windy;
@@ -20,12 +14,12 @@ public class WeatherData {
 
 
     public WeatherData(String locationName, BigDecimal temperature,
-                       BigDecimal min_temperature, BigDecimal max_temperature,
+                       BigDecimal minTemperature, BigDecimal maxTemperature,
                        String weather, double raining, double windy, int humidity) {
         this.locationName = locationName;
         this.temperature = temperature;
-        this.min_temperature = min_temperature;
-        this.max_temperature = max_temperature;
+        this.minTemperature = minTemperature;
+        this.maxTemperature = maxTemperature;
         this.iconWeather = weather;
         this.raining = raining;
         this.windy = windy;
@@ -36,10 +30,6 @@ public class WeatherData {
         return locationName;
     }
 
-    public void setLocationName(String locationName) {
-        this.locationName = locationName;
-    }
-
     public BigDecimal getTemperature() {
         return temperature;
     }
@@ -48,20 +38,20 @@ public class WeatherData {
         this.temperature = temperature;
     }
 
-    public BigDecimal getMin_temperature() {
-        return min_temperature;
+    public BigDecimal getMinTemperature() {
+        return minTemperature;
     }
 
-    public void setMin_temperature(BigDecimal min_temperature) {
-        this.min_temperature = min_temperature;
+    public void setMinTemperature(BigDecimal minTemperature) {
+        this.minTemperature = minTemperature;
     }
 
-    public BigDecimal getMax_temperature() {
-        return max_temperature;
+    public BigDecimal getMaxTemperature() {
+        return maxTemperature;
     }
 
-    public void setMax_temperature(BigDecimal max_temperature) {
-        this.max_temperature = max_temperature;
+    public void setMaxTemperature(BigDecimal maxTemperature) {
+        this.maxTemperature = maxTemperature;
     }
 
     public String getIconWeather() {

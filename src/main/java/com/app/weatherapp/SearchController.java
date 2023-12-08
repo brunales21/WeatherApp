@@ -8,20 +8,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class SearchController {
-    @FXML
-    TextField textField;
-    @FXML
-    ImageView imageView;
-    @FXML
-    AnchorPane panelPrincipal;
+    @FXML private TextField textField;
+    @FXML private AnchorPane panelPrincipal;
     private final WeatherDataMediator mediator;
-
     public SearchController() {
         mediator = new WeatherDataMediator();
     }
-
     @FXML
-    public void onClick(MouseEvent event) {
+    private void onClick(MouseEvent event) {
         try {
             mediator.initWeatherController(textField.getText());
             closeSearchView();
@@ -41,12 +35,8 @@ public class SearchController {
         textField.setText("");
     }
 
-    public void closeSearchView() {
+    private void closeSearchView() {
         Stage myStage = (Stage) this.textField.getScene().getWindow();
         myStage.close();
-    }
-
-    public Stage getStage() {
-        return (Stage) textField.getScene().getWindow();
     }
 }

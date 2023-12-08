@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class WeatherIconMapper {
     private static final Map<String, String> iconMap = new HashMap<>();
-
     static {
         iconMap.put("Rain", "rainy.png");
         iconMap.put("Drizzle", "rainy.png");
@@ -23,7 +22,6 @@ public class WeatherIconMapper {
         iconMap.put("Squall", "squall.png");
         iconMap.put("Tornado", "tornado.png");
     }
-
     public static String getWeatherIcon(String clime) {
         return iconMap.getOrDefault(clime, "unknown.png");
     }

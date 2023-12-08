@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class ErrorDialog extends Stage {
-
     public ErrorDialog(String errorMessage) {
         initStyle(StageStyle.UTILITY);
         initModality(Modality.APPLICATION_MODAL);

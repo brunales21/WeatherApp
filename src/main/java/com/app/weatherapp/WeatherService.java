@@ -18,18 +18,16 @@ import java.nio.charset.StandardCharsets;
 
 
 public class WeatherService {
-
     private static final String API_KEY = "c37f27d3b5efe8d856bf0e9fa36fc1ae";  // Reemplaza con tu clave de API
     private static final String API_URL = "https://api.openweathermap.org/data/2.5/weather";
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
-
+    //Realiza un get a una api de la localizacion pasada por parametro y devuelve un objeto weather data
     public WeatherData getWeatherData(String location) throws LocationNotFoundException {
         if (location.isBlank()) {
             throw new LocationNotFoundException("");
         }
-        String encodedLocation = null;
-        encodedLocation = URLEncoder.encode(location, StandardCharsets.UTF_8);
+        String encodedLocation = URLEncoder.encode(location, StandardCharsets.UTF_8);
         String requestUrl = API_URL + "?q=" + encodedLocation + "&appid=" + API_KEY;
 
         URI uri = null;
@@ -38,10 +36,8 @@ public class WeatherService {
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(uri)
-                .GET()
-                .build();
+
+        HttpRequest request = HttpRequest.newBuilder().uri(uri).GET().build();
 
         HttpResponse<String> response = null;
         try {
@@ -53,11 +49,12 @@ public class WeatherService {
         // Manejar el código de respuesta
         int statusCode = response.statusCode();
         if (statusCode == 404) {
-            // Localización no encontrada, lanzar una excepción específica
+            //Localización no encontrada
             throw new LocationNotFoundException(location);
         } else if (statusCode != 200) {
             throw new RuntimeException("Error al obtener datos meteorológicos");
         }
+
         JSONObject json = new JSONObject(response.body());
         System.out.println(json);
         JSONArray weather = json.getJSONArray("weather");
@@ -75,7 +72,6 @@ public class WeatherService {
         BigDecimal temperaturaMinima = temp.getBigDecimal("temp_min");
         temperaturaMinima = temperaturaMinima.subtract(BigDecimal.valueOf(273.15));
 
-
         //Viento tranformado a km/h
         JSONObject viento = json.getJSONObject("wind");
         double wind = viento.getInt("speed");
@@ -90,13 +86,12 @@ public class WeatherService {
                 lluvia = valorLLuvia.getDouble("1h");
                 System.out.println(lluvia);
             }
-
         } catch (JSONException e) {
+            //Lanzara esta excepcion cuando la localizacion no tenga precipitaciones
             lluvia = 0;
         }
 
-        // Como ejemplo, crearemos un objeto WeatherData con valores predeterminados
-        WeatherData weatherData = new WeatherData(location, temperatura, temperaturaMinima, temperaturaMaxima, icon, lluvia, wind, humidity);
-        return weatherData;
+        return new WeatherData(location, temperatura, temperaturaMinima, temperaturaMaxima,
+                icon, lluvia, wind, humidity);
     }
 }
